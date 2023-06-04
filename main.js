@@ -1,5 +1,5 @@
 const linksSocialMedia = {
-  instagram: 'jessicaguedes.tech',
+  instagram: 'luciana.developer',
   linkedin: 'in/jéssica-guedes-a323a11b7',
   github: 'jessica-guedes'
 }
