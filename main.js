@@ -1,30 +1,27 @@
 const linksSocialMedia = {
-  instagram: 'luciana.developer',
-  linkedin: 'in/jéssica-guedes-a323a11b7',
-  github: 'jessica-guedes'
-}
+  instagram: "luciana.developer",
+  linkedin: "#",
+  github: "luciana-pessoa",
+};
 
 function changeSocialMediaLinks() {
   for (let li of socialLinks.children) {
-    const social = li.getAttribute('class')
-    li.children[0].href = `https://${social}.com/${linksSocialMedia[social]}`
+    const social = li.getAttribute("class");
+    li.children[0].href = `https://${social}.com/${linksSocialMedia[social]}`;
   }
 }
-changeSocialMediaLinks()
+changeSocialMediaLinks();
 
 function getGitHubProfileInfos() {
-  const url = `https://api.github.com/users/${linksSocialMedia.github}`
+  const url = `https://api.github.com/users/${linksSocialMedia.github}`;
 
   fetch(url)
-  .then(response => response.json())
-  .then(data => {
-    userName.textContent = data.name
-    userBio.textContent = data.bio
-    //userImage.src = data.avatar_url função para mudar imagem para foto que está no github
-
-  })
+    .then((response) => response.json())
+    .then((data) => {
+      userName.textContent = data.name;
+      userBio.textContent = data.bio;
+      //userImage.src = data.avatar_url função para mudar imagem para foto que está no github
+    });
 }
 
-getGitHubProfileInfos()
-
-
+getGitHubProfileInfos();
